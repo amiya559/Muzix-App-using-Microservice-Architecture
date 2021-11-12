@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.favlistservice.FavListServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.378 s - in com.example.favlistservice.FavListServiceApplicationTests

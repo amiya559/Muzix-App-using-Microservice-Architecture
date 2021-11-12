@@ -1,0 +1,18 @@
+server:
+  port: 9089
+
+jwt:
+  secret: amiya@123
+
+spring:
+  application:
+    name: USER-AUTHENTICATION-SERVICE
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9096/eureka/
+  instance:
+    hostname: localhost

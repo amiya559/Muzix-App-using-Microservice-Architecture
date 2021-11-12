@@ -1,0 +1,31 @@
+server:
+  port: 9093
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: USER-AUTHENTICATION-SERVICE
+          uri: lb://USER-AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/users/**
+        - id: FAVORITE-MUSIC-SERVICE
+          uri: lb://FAVORITE-MUSIC-SERVICE
+          predicates:
+            - Path=/music/**
+        - id: RECOMMEND-MUSIC-SERVICE
+          uri: lb://RECOMMEND-MUSIC-SERVICE
+          predicates:
+              - Path=/songs/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9096/eureka/
+  instance:
+    hostname: localhost
+
